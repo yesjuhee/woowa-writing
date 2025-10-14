@@ -114,7 +114,7 @@ committer norang <norang@gmail.com> 1741103661 +0900
 
 "커밋은 스냅샷이다"라는 말을 들어보셨을 것입니다. 객체의 관점에서 보면, **커밋은 트리를 참조하는 객체**라고 이해할 수 있습니다.
 
-![image.png](attachment:5e59f2ba-2829-4c07-a755-a5694b56f22e:image.png)
+![image.png](./image/image.png)
 
 ### Tree 객체
 
@@ -134,7 +134,7 @@ $ git cat-file -p 6760
 
 **트리는 디렉터리를 표현하는 객체**입니다. 실제 디렉터리가 파일이나 하위 디렉터리를 포함할 수 있듯이, 트리는 블랍(blob)이나 다른 트리를 참조할 수 있습니다.
 
-![image.png](attachment:ef511597-f7e1-4e73-9931-d668bd67014b:image.png)
+![image.png](./image/image%20copy.png)
 
 ### Blob 객체
 
@@ -147,7 +147,7 @@ $ git cat-file -p d128
 
 **블랍은 파일의 내용을 저장하는 객체**입니다. 주목할 점은 블랍 안에는 파일 이름이나 권한 같은 메타데이터가 없다는 것입니다. 이러한 정보는 모두 트리 객체에 포함되어 있습니다.
 
-![image.png](attachment:8aedcf44-9c75-4314-a23f-64ea9d82b811:image.png)
+![image.png](./image/image%20copy%202.png)
 
 ### Git 객체 요약
 
@@ -176,7 +176,7 @@ $ tree
 
 현재 파일 구조는 다음과 같습니다:
 
-![image.png](attachment:5f8411fa-3d8d-4dd2-8e43-15a724c8df57:image.png)
+![image.png](./image/image%20copy%203.png)
 
 이제 변경사항을 커밋합니다:
 
@@ -204,7 +204,7 @@ committer norang <norang@gmail.com> 1741105670 +0900
 
 첫 번째 커밋과 비교하면 **parent** 라인이 추가된 것을 확인할 수 있습니다. 이를 통해 **커밋은 이전 커밋을 부모 커밋으로 참조**한다는 것을 알 수 있습니다. 첫 번째 커밋은 **root 커밋**이기 때문에 부모가 없었던 것입니다.
 
-![image.png](attachment:2a0c2b3d-61d3-4922-8b4a-ff578d56bd59:image.png)
+![image.png](./image/image%20copy%204.png)
 
 ### 트리의 계층 구조
 
@@ -232,7 +232,7 @@ Hello World
 
 트리가 또 다른 트리를 참조하는 계층 구조를 확인할 수 있습니다. 중요한 점은 **변경사항이 없는 파일**(first.txt)의 경우 블랍을 새로 만들지 않고 **기존 블랍을 재사용**한다는 것입니다.
 
-![image.png](attachment:8e4bf9cd-7adc-4100-be01-849e74d72afa:image.png)
+![image.png](./image/image%20copy%205.png)
 
 ## 세 번째 커밋: 기존 파일 수정
 
@@ -266,7 +266,7 @@ committer norang <norang@gmail.com> 1741107022 +0900
 세 번째 커밋
 ```
 
-![image.png](attachment:b044380d-7d02-4194-adf4-73b1e07f005f:image.png)
+![image.png](./image/image%20copy%206.png)
 
 ### 파일 변경 시 새로운 블랍 생성
 
@@ -290,7 +290,7 @@ Hello git
 
 ## Git Objects 정리
 
-![image.png](attachment:00e4cefb-89bc-43c3-8941-35ded7f4fe1e:image.png)
+![image.png](./image/image%20copy%207.png)
 
 세 번의 커밋을 통해 배운 내용을 정리하면 다음과 같습니다:
 
